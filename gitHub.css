@@ -1,0 +1,161 @@
+:root{
+    --text-color:#adbac7;
+    --green:#41ab5a;
+    --hyperText: #488ce8;
+    --mainColor:#22272e;
+    --borderLine: #7f8286;
+    --headerColor: #1c2128;
+    --headerHeight: 18px;
+}
+
+*{
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.AppHeader-globalBar {
+    background-color: #1c2128;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    position: relative;
+}
+
+.AppHeader-globalBar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1px; 
+    background: #333942;
+}
+.left-container{
+    display: flex;
+    align-items: center;
+    width: 28vw;
+    background-color: transparent;
+}
+.Button--iconOnly{
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px 0px 6px;
+    border-radius: 4px;
+    background: none;
+    border: 1px solid #454a4f90;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.left-container button>svg{
+    width: 100%;
+    fill: var(--borderLine);
+    padding: 3px;
+    background-color: transparent;
+}
+/* modifica las propiedades del icono Github */
+.Button--iconOnly + svg{
+    background-color: transparent;
+    fill:var(--text-color);
+}
+.left-container > span{
+    font-size: 10px;
+    font-weight: 700;
+    background-color: transparent;
+}
+.left-container .catIcon{
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.right-container{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    background-color: var(--headerColor);
+}
+/* Contenedor Button */
+.btn-input{
+    background-color: var(--headerColor);
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--borderLine);
+    border-radius: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+    width: 210px;
+    padding: 2px 0px;
+}
+/* contendor del icono de busqueda */
+.right-container .catIcon-search{
+    background-color: var(--headerColor);
+    fill: var(--text-color);
+    width: 8px;
+    height: 8px;
+}
+/* Icono de busqueda dentro del button */
+.right-container .btn-input svg{
+    background-color: var(--headerColor);
+    width: 20px;
+    margin-right: 2px;
+}
+
+.btn-input span{
+    background-color: var(--headerColor);
+    color: var(--borderLine);
+    font-size: 10px;
+    padding-bottom: 2px;
+}
+.btn-input .pipe-line{
+    stroke: var(--borderLine);
+    height: 10px;
+    margin-left: auto;
+}
+/* paleta de comandos */
+.catIcon-command-palette{
+    background-color: var(--headerColor);
+    fill: var(--text-color);
+    height: 12px;
+    margin-left: -10px;
+}
+
+/* id de la cruz y el triangulo selector */
+#global-create-menu-button{
+    background-color: var(--headerColor);
+    padding: 1px 0px;
+    margin-right: 12px;
+    border: 1px solid var(--borderLine);
+    border-radius: 4px;
+}
+
+/* Selector de la cruz */
+.Button-visual svg{
+    fill: var(--text-color);
+    stroke: var(--borderLine);
+    background-color: var(--headerColor);
+    height: 12px;
+    border-radius: 3px;
+    padding: 2px 0px;
+    margin-right: -5px;
+}
+.catIcon-triangle-down{
+    background-color: var(--headerColor);
+    height: 12px;
+    border-radius: 3px;
+    stroke: var(--borderLine);
+    fill: var(--borderLine);
+}
+main{
+    background-color: var(--mainColor);
+}
+/* Contenedor del icono "issues"*/
+.btn-issues{
+    background-color: var(--headerColor);
+    border: 1px solid var(--borderLine);
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
