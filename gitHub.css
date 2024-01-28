@@ -5,7 +5,8 @@
     --mainColor:#22272e;
     --borderLine: #7f8286;
     --headerColor: #1c2128;
-    --headerHeight: 18px;
+    --headerHeight: 22px;
+    --marginRight:10px;
 }
 
 *{
@@ -84,7 +85,7 @@
     align-items: center;
     border: 1px solid var(--borderLine);
     border-radius: 4px;
-    margin-right: 4px;
+    margin-right: var(--marginRight);
     cursor: pointer;
     width: 210px;
     padding: 2px 0px;
@@ -126,7 +127,7 @@
 #global-create-menu-button{
     background-color: var(--headerColor);
     padding: 1px 0px;
-    margin-right: 12px;
+    margin-right: var(--marginRight);
     border: 1px solid var(--borderLine);
     border-radius: 4px;
 }
@@ -148,14 +149,29 @@
     stroke: var(--borderLine);
     fill: var(--borderLine);
 }
-main{
-    background-color: var(--mainColor);
-}
+
 /* Contenedor del icono "issues"*/
-.btn-issues{
+.right-container .btn-issues, .right-container .pull-request,.right-container .inbox{
     background-color: var(--headerColor);
     border: 1px solid var(--borderLine);
     border-radius: 4px;
-    margin-right: 12px;
+    margin-right: var(--marginRight);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+/* svg issues */
+.right-container .octicon-issue-opened, .right-container .octicon-git-pull-request,.right-container .octicon-inbox{
+    fill: var(--borderLine);
+    padding: 2px
+}
+.avatar{
+    margin-right: var(--marginRight);
+    border-radius: 20px;
+    height: var(--headerHeight);
+    width: auto;
 }
 
+main{
+    background-color: var(--mainColor);
+}
